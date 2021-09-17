@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./style.css"> <!--CSS-->
+
+	<title>Movies</title>
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			<h3 class="text1">MovieTIME</h3>
+			<i class="fal fa-camera-movie"></i>
+
+			<nav>
+				<ul id="menu-List">
+					<li class="nav-li"><a class="navlink" href="./index.html">Home</a></li>
+					<li class="nav-li"><a class="navlink" href="./series.html">Séries</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+		<main id="main">
+
+			<div class="movie">
+			<img  src="" alt="">
+				<div class="movie-info">
+					<h3></h3>
+					<span class="green"></span>
+				</div>
+				<div class="overview">
+					<h3></h3>
+				</div>
+			</div>
+
+		</main>
+
+		<div class="form">
+			<form method="POST" action="http://localhost:3003/comentar" autocomplete="on">
+				<label for="nome">Nome:</label>
+				<br><br>
+				<input name="nome" id="nome" type="text">
+				<br><br>
+				<label for="comentar">Comentário:</label>
+				<br><br>
+				<input name="comentario" id="comentario" type="text">
+				<!--<textarea cols="30" rows="10" name="conteudo" id="comentario"></textarea>-->
+				<div class="bt"><button type="submit">Enviar</button></div>
+
+			</form>
+		</div>
+</body>
+
+	<script src="./script.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js%22%3E"></script>
+
+</html>
+
+
