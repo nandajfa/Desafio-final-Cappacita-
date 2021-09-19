@@ -63,7 +63,7 @@ Disponível na pasta Banco de dados do projeto.
 
 *A collection está disponível na pasta postman do projeto, basta fazer o import na ferramenta e começar a fazer as requests* 
 
- [Postman](https://www.postman.com/downloads/)
+ <a href="https://www.postman.com/downloads/" target="_blank">Postman
  
 ## Autor
 
