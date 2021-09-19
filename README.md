@@ -43,7 +43,7 @@ $ npm run dev
 ### Front end
 
 ```bash
-# Start no Fron
+# Start no Front
 
 $ cd Front
 
