@@ -1,8 +1,7 @@
 const { databaseConnection } = require('./connection')
 const axios = require('axios')
 
-
-const API_KEY =  process.env.DB_APIKEY
+const API_KEY =  process.env.API_KEY
 const BASE_URL = 'https://api.themoviedb.org/3'
 const API_URL = BASE_URL + '/discover/movie?with_genres=36&language=pt-BR&' + API_KEY
 

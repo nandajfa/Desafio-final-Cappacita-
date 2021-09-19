@@ -55,7 +55,73 @@ function getColor(vote){
 
 
 /* Pegar dados do form para o banco de dados*/
-function cadastrarComentario(){
+const enviar = async()=>{
+
+	event.preventDefault()
+
+	/*Pega os valores do formulário */
+	let nome = document.getElementById("nome").value
+	let comentario = document.getElementById("comentario").value
+
+
+	let response = fetch('http://localhost:3003/comentar',
+	  {
+		method:'post',
+		body:JSON.stringify(
+		  {
+			nome,
+        	comentario
+		  }
+		),
+		mode: 'cors',
+		headers:{
+		  'Content-Type': 'application/json'
+		}
+	  }
+	)
+	.then((res)=> res.json())
+	.then((data)=> data)
+  }
+
+/*Pegar dados do Banco de dados e mostrar no HTML*/
+
+function getComent(url){
+	let request = new XMLHttpRequest()
+	request.open("GET", url, false)
+	request.send()
+	return request.responseText
+}
+
+function showtab(comentario){
+	linha = document.createElement("div")
+
+	tdComentario = document.createElement("p")
+
+	tdComentario.innerHTML = comentario.comentario
+
+	linha.appendChild(tdComentario)
+
+	return linha;
+}
+
+function tab(){
+	data = getComent("http://localhost:3003/comentar")
+	comentario = JSON.parse(data);
+	console.log(comentario)
+
+	let lista = document.getElementById("lista")
+
+	comentario.forEach(element => {
+		let linha = showtab(element)
+		lista.appendChild(linha)
+	})
+}
+
+tab()
+
+
+
+  /*function cadastrarComentario(){
 	event.preventDefault()
 	let url = "http://localhost:3003/comentar"
 	let nome = document.getElementById("nome").value
@@ -83,74 +149,4 @@ function enviar(url, body) {
     }
 
     return request.responseText
-}
-
-/*Pegar dados do Banco de dados e mostrar no HTML*/
-
-function getComent(url){
-	let request = new XMLHttpRequest()
-	request.open("GET", url, false)
-	request.send()
-	return request.responseText
-}
-
-function showtab(comentario){
-	linha = document.createElement("ul")
-	tdNome = document.createElement("li")
-	tdComentario = document.createElement("li")
-
-	tdNome.innerHTML = comentario.nome
-	tdComentario.innerHTML = comentario.comentario
-
-	linha.appendChild(tdNome)
-	linha.appendChild(tdComentario)
-
-	return linha;
-}
-
-function tab(){
-	data = getComent("http://localhost:3003/comentar")
-	comentario = JSON.parse(data);
-	console.log(comentario)
-
-	let lista = document.getElementById("lista")
-
-	comentario.forEach(element => {
-		let linha = showtab(element)
-		lista.appendChild(linha)
-	})
-}
-
-tab()
-
-
-
-
-
-/*const enviar = async()=>{
-
-	event.preventDefault()
-
-	/*Pega os valores do formulário */
-/*	let nome = document.getElementById("nome").value
-	let comentario = document.getElementById("comentario").value
-
-
-	let response = fetch('http://localhost:3003/comentar',
-	  {
-		method:'post',
-		body:JSON.stringify(
-		  {
-			nome,
-        	comentario
-		  }
-		),
-		mode: 'cors',
-		headers:{
-		  'Content-Type': 'application/json'
-		}
-	  }
-	)
-	.then((res)=> res.json())
-	.then((data)=> data)
-  }*/
+}*/

@@ -12,9 +12,10 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+/* --Listar comentarios--
 axios.get("http://localhost:3003/comentar").then(function(resposta){
 	console.log(resposta.data);
-})
+})*/
 
 app.get('/filmes', async(req, res) =>{
 	const filmes = await dataBase.showMovie()

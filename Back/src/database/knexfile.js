@@ -3,10 +3,10 @@
 module.exports = {
   client: 'mysql2',
   connection: {
-    host : process.env.DB_HOST,
-    port : process.env.DB_PORT,
-    user : process.env.DB_USER,
-    password : process.env.DB_PASS,
+    host : process.env.HOST,
+    port : process.env.PORT,
+    user : process.env.USER,
+    password : process.env.PASS,
     database : 'filmes_series'
   },
   debug: true
