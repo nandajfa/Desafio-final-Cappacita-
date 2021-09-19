@@ -40,6 +40,24 @@ $ npm install --save
 $ npm run dev
 ```
 
+#### Renomeie o arquivo ".env.example" para ".env" e altere as configurações.
+
+```bash
+
+# MySql
+
+HOST=localhost
+PORT=8888
+USER=Usuario
+PASS=Senha
+
+# API TMDB
+API_KEY=key
+ 
+```
+
+# Server
+
 ### Front end
 
 ```bash
