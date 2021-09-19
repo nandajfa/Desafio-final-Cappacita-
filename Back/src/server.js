@@ -2,16 +2,30 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const axios = require('axios')
-const dataBase = require('./database/dataBase')
 
+const cors = require('cors')
 const bodyParser = require('body-parser')
 
+const dataBase = require('./database/dataBase')
+
+app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-/*axios.get("https://api.themoviedb.org/3/tv/67136?api_key=172c6271ccf9b86b8f65f98250a5e3fc&language=pt-BR").then(function(resposta){
+axios.get("http://localhost:3003/comentar").then(function(resposta){
 	console.log(resposta.data);
-})*/
+})
+
+app.get('/filmes', async(req, res) =>{
+	const filmes = await dataBase.showMovie()
+	res.send(filmes)
+})
+
+app.get('/series', async(req, res) =>{
+	const series = await dataBase.showSerie()
+	res.send(series)
+})
+
 
 app.get('/comentar', async (req, res) => {
 	res.send( await dataBase.mostrarComentarios())

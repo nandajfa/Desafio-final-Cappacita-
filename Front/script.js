@@ -1,24 +1,25 @@
-const API_KEY = 'api_key=172c6271ccf9b86b8f65f98250a5e3fc'
-const BASE_URL = 'https://api.themoviedb.org/3'
-const API_URL = BASE_URL + '/discover/movie?with_genres=36&language=pt-BR&' + API_KEY
 const IMG_URL = 'https://image.tmdb.org/t/p/w500'
 
 const main = document.getElementById("main")
 
-getMovies(API_URL);
+async function getMovie() {
+		   try {
+			   const response = await fetch('http://localhost:3003/filmes')
+			   const data = await response.json()
 
-function getMovies(url){
+			   showMovies(data)
+		   } catch (error) {
+			   console.log(error)
+		   }
 
-	fetch(url).then(res => res.json().then (data => {
-		/*onsole.log(data.results)*/
-		showMovies(data.results);
-	}))
-}
+	   }
 
-function showMovies(data){
+getMovie()
+
+function showMovies(movies){
 	main.innerHTML = '';
 
-	data.forEach(movie => {
+	movies.forEach(movie => {
 
 		const {title, poster_path, vote_average, overview} = movie;
 		const movieE1 = document.createElement('div');
@@ -53,7 +54,7 @@ function getColor(vote){
 }
 
 
-
+/* Pegar dados do form para o banco de dados*/
 function cadastrarComentario(){
 	event.preventDefault()
 	let url = "http://localhost:3003/comentar"
@@ -78,11 +79,53 @@ function enviar(url, body) {
     request.send(JSON.stringify(body))
 
     request.onload = function() {
-        console.log(this.responseText)
+		console.log(this.responseText)
     }
 
     return request.responseText
 }
+
+/*Pegar dados do Banco de dados e mostrar no HTML*/
+
+function getComent(url){
+	let request = new XMLHttpRequest()
+	request.open("GET", url, false)
+	request.send()
+	return request.responseText
+}
+
+function showtab(comentario){
+	linha = document.createElement("ul")
+	tdNome = document.createElement("li")
+	tdComentario = document.createElement("li")
+
+	tdNome.innerHTML = comentario.nome
+	tdComentario.innerHTML = comentario.comentario
+
+	linha.appendChild(tdNome)
+	linha.appendChild(tdComentario)
+
+	return linha;
+}
+
+function tab(){
+	data = getComent("http://localhost:3003/comentar")
+	comentario = JSON.parse(data);
+	console.log(comentario)
+
+	let lista = document.getElementById("lista")
+
+	comentario.forEach(element => {
+		let linha = showtab(element)
+		lista.appendChild(linha)
+	})
+}
+
+tab()
+
+
+
+
 
 /*const enviar = async()=>{
 

@@ -5,7 +5,8 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="./style.css"> <!--CSS-->
+	<!--CSS-->
+	<link rel="stylesheet" href="./style.css">
 
 	<title>Movies</title>
 </head>
@@ -43,20 +44,27 @@
 			<form method="POST" action="http://localhost:3003/comentar" autocomplete="on">
 				<label for="nome">Nome:</label>
 				<br><br>
-				<input name="nome" id="nome" type="text">
+				<input name="nome" id="nome" type="text" placeholder="Nome">
 				<br><br>
-				<label for="comentar">Comentário:</label>
-				<br><br>
-				<input name="comentario" id="comentario" type="text">
+				<input name="comentario" id="comentario" type="text" placeholder="Escreva um comentário">
 				<!--<textarea cols="30" rows="10" name="conteudo" id="comentario"></textarea>-->
 				<div class="bt"><button type="submit">Enviar</button></div>
-
 			</form>
+			<div id="comments">
+				<ul id="lista">
+					<p>Comentários: </p>
+
+				</ul>
+			</div>
+
 		</div>
 </body>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	<script src="./script.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js%22%3E"></script>
+
 
 </html>
 

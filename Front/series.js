@@ -1,21 +1,19 @@
 
-
-const API_KEY = 'api_key=172c6271ccf9b86b8f65f98250a5e3fc'
-const BASE_URL = 'https://api.themoviedb.org/3'
-const API_URL = BASE_URL + '/discover/tv?with_network=213&language=pt-BR&' + API_KEY
 const IMG_URL = 'https://image.tmdb.org/t/p/w500'
 
 const main = document.getElementById("main")
 
-getSeries(API_URL)
-
-function getSeries(url){
-
-	fetch(url).then(res => res.json().then (data => {
-		console.log(data.results);
-		showSeries(data.results);
-	}))
+async function getSerie() {
+	try {
+		const response = await fetch('http://localhost:3003/series')
+		const data = await response.json()
+		showSeries(data)
+	} catch (error) {
+		console.log(error)
+	}
 }
+
+getSerie()
 
 function showSeries(data){
 	main.innerHTML = '';
