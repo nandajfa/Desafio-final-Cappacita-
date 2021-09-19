@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "a6a7036c-e704-4e0b-843f-662a8bd05e1f",
+		"name": "API_Comments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mostrar comentarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/comentar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"comentar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar comentario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "comentario",
+							"value": "Que site bom!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3003/comentar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"comentar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar comentario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/comentar/:id?=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"comentar",
+						":id"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": ""
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
