@@ -7,8 +7,6 @@ MovieTime é uma aplicação construída como projeto final do curso CAPPACITA D
 
 A aplicação consiste em criar uma interface gráfica que apresente pelo menos uma lista de filmes ou séries, chamando serviços do TMDb. (Uma base de dados gratuita e de código aberto sobre filmes e séries de TV)
 
-Backend em NodeJS e banco de dados MySQL.
-
 ## Layout web
 ![Web 1](https://github.com/nandajfa/Desafio-final-Cappacita-/blob/master/assets/12.png)
 
@@ -45,7 +43,7 @@ $ npm run dev
 ### Front end
 
 ```bash
-# Start no Fron
+# Start no Front
 
 $ cd Front
 
@@ -65,7 +63,7 @@ Disponível na pasta Banco de dados do projeto.
 
 *A collection está disponível na pasta postman do projeto, basta fazer o import na ferramenta e começar a fazer as requests* 
 
- [Postman](https://www.postman.com/downloads/)
+ <a href="https://www.postman.com/downloads/" target="_blank">Postman
  
 ## Autor
 
