@@ -33,7 +33,7 @@ Pré-requisitos: [Node.js](https://nodejs.org/en/)
 # clonar repositório
 $ git clone https://github.com/nandajfa/Desafio-final-Cappacita-.git
 
-# Instalar as dependências
+# Instalar as dependências na pasta raiz
 $ npm install --save
 
 # Iniciar servidor Node.js
