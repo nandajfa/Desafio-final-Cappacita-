@@ -75,9 +75,9 @@ Disponível na pasta Banco de dados.
 
 ## APIs
 
-** Documentação da API no link: [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)**
+** Documentação da API no link: [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction) **
 
-*A collection está disponível na pasta postman do projeto, basta fazer o import na ferramenta e fazer as requests. * 
+* A collection está disponível na pasta postman do projeto, basta fazer o import na ferramenta e fazer as requests. * 
 
  <a href="https://www.postman.com/downloads/" target="_blank">Postman
  
