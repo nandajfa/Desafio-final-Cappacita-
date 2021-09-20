@@ -73,13 +73,13 @@ $ npx lite-server
 
 [MySQL Workbench](https://www.mysql.com/downloads/)
 
-Disponível na pasta Banco de dados do projeto.
+Disponível na pasta Banco de dados. 
 
 ## APIs
 
-**Para visualizar a documentação da API acesse o seguinte link: [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)**
+** Documentação da API no link: [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)**
 
-*A collection está disponível na pasta postman do projeto, basta fazer o import na ferramenta e começar a fazer as requests* 
+*A collection está disponível na pasta postman do projeto, basta fazer o import na ferramenta e fazer as requests. * 
 
  <a href="https://www.postman.com/downloads/" target="_blank">Postman
  
