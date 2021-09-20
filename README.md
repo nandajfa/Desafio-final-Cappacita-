@@ -56,8 +56,6 @@ API_KEY=key
  
 ```
 
-# Server
-
 ### Front end
 
 ```bash
