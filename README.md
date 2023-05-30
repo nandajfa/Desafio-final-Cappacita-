@@ -83,4 +83,4 @@ Disponível na pasta Banco de dados.
  
 ## Autor
 
-Made by jessica Fernanda 👋 [See my linkedin](https://www.linkedin.com/in/jessica-fernanda-106651205)
+Made by jessica Fernanda 👋 [See my linkedin](https://www.linkedin.com/in/jessica-fernanda-programadora/)
